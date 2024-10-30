@@ -1,0 +1,1217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="RH">
+<meta name="description" content="Página de Recursos Humanos">
+<meta name="keywords" content="BestSummit">
+<meta name="robots" content="ALL">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="shortcut icon" href="Imagen RH.jpg">
+<title>RH</title>
+
+<style>
+    body {
+        background-color: black;
+        color: white;
+        font-family: 'Open Sans', sans-serif;
+    }
+    
+    .navbar {
+        background-color: #003399; /* Azul rey */
+    }
+    
+    .navbar-nav .nav-link {
+        color: white !important;
+        font-size: 20px;
+    }
+    
+    .navbar-brand img {
+        height: 100px; /* Reduce el tamaño del logo */
+        margin-top: -10px; /* Ajusta el margen superior para alinear mejor */
+        margin-bottom: -10px; /* Ajusta el margen inferior para alinear mejor */
+    }
+    
+    .second-logo {
+        text-align: center;
+        margin: 0;
+        margin-left: 7cm; /* Mueve el segundo logo cm*/
+    }
+    
+    .second-logo img {
+        max-width: 40%; /* Reduce el tamaño del segundo logo */
+        margin-top: -60px; /* Ajusta el margen superior*/
+        margin-bottom: -60px; /* Ajusta el margen inferior*/
+    }
+    
+    .video-container {
+        text-align: center;
+        margin: 30px 0;
+    }
+    
+    .video-container video {
+        width: 78.5%;
+        height: auto;
+        border: 5px solid #4B4B4B; /* Color gris */
+        border-radius: 10px; /* Esquinas redondeadas */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);    
+        padding: 5px; /* Espacio interno */
+    }
+    
+    .description-container {
+        background-color: #003399; /* Azul rey */
+        color: white;
+        padding: 20px;
+        text-align: center;
+        margin: 30px 0;
+    }
+    
+    .description-container p {
+        font-size: 20px; /* Tamaño de fuente más grande */
+        text-align: justify;
+        max-width: 100%; /* texto se ajuste al ancho del video */
+        margin: 0 auto;
+    }
+    
+    .image-container {
+        text-align: center;
+        margin: 30px 0;
+    }
+    
+    .image-container img {
+        max-width: 100%;
+        height: auto;
+        border: 5px solid #4B4B4B; /* Color gris */
+        border-radius: 10px; /* Esquinas redondeadas */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);    
+        padding: 5px; /* Espacio interno */
+    }
+    
+    .additional-text-container {
+        text-align: center;
+        margin: 30px 0;
+    }
+    
+    .additional-text-container p {
+        font-size: 18px;
+        text-align: justify;
+        max-width: 800px; 
+        margin: 0 auto;
+    }
+    
+    .congreso-container,
+    .programa-container,
+    .ubicacion-container {
+        text-align: center;
+        margin: 30px 0;
+        background-color: #003399; /* Azul rey */
+        padding: 20px 0;
+        border: 5px solid #4B4B4B; /* Color gris */
+        border-radius: 10px; /* Esquinas redondeadas */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);    
+        padding: 5px; /* Espacio interno */
+    }
+    
+    .congreso-container h2,
+    .programa-container h2,
+    .ubicacion-container h2 {
+        font-size: 28px;
+        margin-bottom: 0;
+        color: white; /* Títulos en blanco */
+    }
+    
+    .footer {
+        background-color: #000000;
+        padding: 10px 0;
+        text-align: center;
+    }
+    
+    .navbar-toggler {
+        border: none;
+    }
+    
+    .navbar-toggler-icon {
+        background-image: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"%3E%3Cpath stroke="white" stroke-width="2" d="M5 7h20M5 15h20M5 23h20"/%3E%3C/svg%3E');
+    }
+    
+    .dropdown-menu {
+        background-color: #003399; /* Azul rey */
+        color: white;
+    }
+    
+    .dropdown-item {
+        color: white !important;
+    }
+    
+    .dropdown-item:hover {
+        background-color: #002a80; /* Azul más oscuro para el hover */
+    }
+    
+    /* Estilo para los enlaces en la parte superior derecha */
+    .navbar-collapse {
+        display: flex;
+        justify-content: flex-end; /* Alinea los enlaces a la derecha */
+        margin-right: 0;
+    }
+    
+    .navbar-nav {
+        display: flex;
+        gap: 15px; /* Espaciado entre los enlaces */
+    }
+    
+    .navbar-nav .nav-link {
+        color: white;
+        font-size: 18px;
+        text-decoration: none;
+    }
+    
+    .navbar-nav .nav-link:hover {
+        text-decoration: underline;
+    }
+    
+    .recuadro-wrapper {
+        background-color: white; /* Fondo blanco para el recuadro */
+        padding: 15px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); /* Sombra para el recuadro */
+    }
+    
+    .image-wrapper {
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    
+    .image-wrapper img {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    .aliados-container {
+        text-align: center;
+        margin-top: 40px;
+    }
+    
+    .aliados-container h2 {
+        font-size: 28px;
+        color: white;
+        margin-bottom: 20px;
+    }
+    
+    .image-wrapper-aliados img {
+        max-width: 20%; 
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); 
+    }
+    
+    .map-container {
+        margin: 20px auto;
+        max-width: 90%;
+    }
+    
+    .map-container iframe {
+        width: 100%;
+        height: 450px;
+        border: 0;
+    }
+    
+    .programa-item .description,
+    .congreso-item .description {
+        flex: 1;
+        max-width: 500px; /* Ajusta el ancho máximo de la descripción */
+    }
+    
+    .programa-item:last-of-type,
+    .congreso-item:last-of-type {
+        margin-bottom: 0; 
+    }
+    
+    .additional-image-container {
+        text-align: center;
+        margin-top: 30px;
+    }
+    
+    .additional-image-container img {
+        max-width: 80%; 
+        height: auto;
+    } 
+
+    .congreso-content {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    width: 100%; 
+    }
+    
+    .congreso-video {
+    width: 100%; 
+    max-width: 100%; 
+    margin-bottom: 10px; 
+    }
+    
+    .congreso-images,
+    .conferencistas-carousel {
+    width: 100%; 
+    max-width: 100%; 
+    display: flex;
+    justify-content: center; 
+    margin-bottom: 20px; /* Espacio entre los carouseles */
+    }
+    
+    .carousel {
+    position: relative;
+    width: 100%; 
+    max-width: 50%; 
+    }
+    
+    .carousel-image {
+    display: none;
+    width: 100%;
+    height: auto;
+    }
+    
+    .carousel-image:first-child {
+    display: block;
+    }
+    
+    
+    .subtitulo {
+    font-size: 24px; 
+    color: white; 
+    margin-bottom: 10px;
+    text-align: center;
+    }
+    
+    .new-image-container img {
+        max-width: 80%; 
+        height: auto; 
+        margin: 0 auto; 
+        display: block; 
+    }
+    
+    
+    .carousel-container {
+        margin-bottom: 2cm; 
+    }
+    
+    .new-image-container {
+        margin-top: 2cm; 
+    }
+    
+    .ubicacion p {
+    font-size: 20px; 
+    margin-top: 20px; 
+    line-height: 1.6; 
+    }
+    
+    .nuevoCarousel-carousel {
+    width: 100%; 
+    max-width: 100%; 
+    display: flex;
+    justify-content: center; 
+    margin-bottom: 20px; 
+    }
+    
+    .nuevoCarousel {
+    position: relative;
+    width: 100%; 
+    max-width: 50%; 
+    }
+    
+    .nuevocCarousel-image {
+    display: none;
+    width: 100%;
+    height: auto;
+    }
+    
+    .nuevocarousel-image:first-child {
+    display: block;
+    }
+    
+    .image2 {
+        text-align: center; 
+        margin: 30px 0; 
+    }
+    
+    .image2 img {
+        max-width: 80%; 
+        height: auto; 
+        display: inline-block; 
+    }
+    .image3 {
+        text-align: center;
+        margin: 30px 0; 
+    }
+    
+    .image3 img {
+        max-width: 80%; 
+        height: auto; 
+       display: inline-block; 
+    }
+    
+    .conferencistas-container {
+        display: flex;
+        justify-content: space-between; 
+        margin-top: 20px; 
+    }
+    
+    .carousel {
+        flex: 1; 
+        margin-right: 20px; /* Espacio entre los carruseles */
+    }
+    .carousel {
+        position: relative;
+        width: 90%;
+        max-width: 80%; 
+        margin: 0 auto; 
+    }
+    
+    .carousel-image {
+        display: none;
+        width: 100%; 
+        height: auto;
+    }
+    .navbar-nav .nav-link {
+        color: white !important; /* Color original del texto */
+        transition: color 0.3s, border 0.3s; /* Transiciones suaves */
+    }
+    
+    .navbar-nav .nav-link:hover,
+    .navbar-nav .nav-link.active {
+        color: #003399; /* Cambia el color del texto al pasar el ratón */
+        border-radius: 5px; /* Bordes redondeados */
+        background-color: transparent; /* Fondo transparente */
+        border: 2px solid black; /* Borde negro al pasar el ratón */
+    }
+    
+    .catalogo-container {
+        margin-top: 100px; /* Ajusta el valor según lo necesites */
+    }
+    .subtitulo-redes {
+        font-size: 20px; /* Tamaño de la fuente del subtítulo */
+        color: white; /* Color del texto */
+        text-align: center; /* Centra el texto */
+        margin-top: 20px; /* Espaciado superior */
+    }
+    
+    .social-logos {
+        display: flex; /* Utiliza flexbox para alinear los logos */
+        justify-content: center; /* Centra los logos horizontalmente */
+        margin-top: 10px; /* Espaciado superior */
+    }
+    
+    .social-logo {
+        margin: 0 10px; /* Espaciado entre los logos */
+        width: 50px; /* Ajusta el tamaño según sea necesario */
+        height: auto;
+    }
+    .linea {
+    width: 35cm;
+    height: 5px; /* Altura de la línea */
+    background-color: #4B4B4B; /* Color azul rey */
+    border: none;
+    }
+     
+    .neon-text {
+        color: #00c; /* Azul cielo neón */
+        text-shadow: 0 0 5px #00c, 0 0 10px #00c, 0 0 20px #00c; /* Efecto neón */
+        font-size: 40px; /* Tamaño de la fuente */
+        border: 2px solid #00c; /* Borde azul cielo */
+        padding: 5px 10px; /* Espacio alrededor del texto */
+        border-radius: 5px; /* Esquinas redondeadas */
+        animation: blink 1s infinite; /* Parpadeo */
+        cursor: pointer; /* Cambia el cursor al pasar el ratón */
+        text-decoration: none; /* Sin subrayado */
+    }
+    
+    @keyframes blink {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.5; }
+    }
+    
+    .modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000; /* Asegúrate de que esté en la parte superior */
+    }
+    
+    .modal-content {
+        background-color: rgb(7, 7, 7); /* Fondo blanco para el contenido */
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(65, 3, 235, 0.5); /* Sombra para el efecto */
+        max-width: 500px;
+        width: 90%; /* Ancho responsivo */
+    }
+    
+    .close-button {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 20px;
+        color: #c00; /* Color del tache */
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+    
+    .close-button:hover {
+        color: #900; /* Color al pasar el ratón */
+    }
+    
+    .text-center {
+        margin-bottom: 15px; /* Espacio entre grupos de campos */
+    }
+    
+    .patrocinador-img {
+        max-width: 100%; 
+        height: 100px; /* Establecer altura uniforme para los logos */
+        object-fit: contain; 
+        margin: 5px; /* Espacio entre imágenes */
+    }
+    
+    .patrocinador-recuadro {
+        padding: 20px; 
+        border-radius: 10px; 
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); 
+        display: flex; 
+        align-items: center; 
+        justify-content: center; 
+        height: 250px; 
+        overflow: hidden; /* Evitar que las imágenes se salgan del recuadro */
+    }
+    
+    .titulo-diamante {
+        color: #00FFEF; /* Color neón para Diamante */
+        text-align: center;
+    }
+    
+    .titulo-oro {
+        color: #FFD700; /* Color neón para Oro */
+        text-align: center;
+    }
+    
+    .titulo-plata {
+        color: #C0C0C0; /* Color neón para Plata */
+        text-align: center;
+    }
+    
+    .titulo-bronce {
+        color: #CD7F32; /* Color neón para Bronce */
+        text-align: center;
+    }
+    
+    .diamante {
+        background-color: rgba(0, 255, 255, 0.1); /* Fondo neón para Diamante */
+    }
+    
+    .oro {
+        background-color: rgba(255, 215, 0, 0.1); /* Fondo neón para Oro */
+    }
+    
+    .plata {
+        background-color: rgba(192, 192, 192, 0.1); /* Fondo neón para Plata */
+    }
+    
+    .bronce {
+        background-color: rgba(205, 127, 50, 0.1); /* Fondo neón para Bronce */
+    }
+    
+    .patrocinadores-container .row {
+        display: flex; 
+        justify-content: space-between; 
+        align-items: flex-start; 
+    }
+    
+    .image-wrapper {
+        display: flex; 
+        justify-content: center; 
+        align-items: flex-end; 
+        flex-wrap: wrap; /* Permitir que las imágenes se distribuyan en varias líneas */
+    }
+    .patrocinador-img {
+        max-width: 100%; 
+        height: 100px; /* Establecer altura uniforme para los logos */
+        object-fit: contain; 
+        margin: 5px; /* Espacio entre imágenes */
+    }
+    
+    .patrocinador-img.small {
+        height: 50px; /* Ajusta la altura para los logos pequeños */
+    }
+    
+    .logo-wrapper {
+        flex: 1; /* Permitir que los logos ocupen espacio igual */
+        display: flex;
+        justify-content: center; /* Centrar el contenido */
+    }
+    
+    .left {
+        justify-content: flex-start; /* Alinear a la izquierda */
+    }
+    
+    .right {
+        justify-content: flex-end; /* Alinear a la derecha */
+    }
+    .patrocinador-img.small {
+        height: 50px; /* Ajusta la altura para los logos pequeños */
+    }
+    
+    .logo-wrapper {
+        flex: 1; /* Permitir que los logos ocupen espacio igual */
+        display: flex;
+        justify-content: center; /* Centrar el contenido */
+    }
+    
+    .left {
+        justify-content: flex-start; /* Alinear a la izquierda */
+    }
+    
+    .right {
+        justify-content: flex-end; /* Alinear a la derecha */
+    }
+    .patrocinador-img.small {
+        height: 50px; /* Ajusta la altura para los logos pequeños */
+    }
+    
+    .image-wrapper {
+        display: flex; /* Usar flexbox para los logos en cada fila */
+        justify-content: space-between; /* Espacio entre logos */
+        margin-bottom: 10px; /* Espacio entre filas */
+    }
+    
+    .logo-wrapper {
+        flex: 1; /* Permitir que los logos ocupen espacio igual */
+        display: flex;
+        justify-content: center; /* Centrar el contenido */
+    }
+    .patrocinador-img {
+        max-width: 100%; 
+        height: 100px; /* Altura por defecto para los logos */
+        object-fit: contain; 
+        margin: 5px; /* Espacio entre imágenes */
+    }
+    
+    /* Logos más grandes para Oro y Plata */
+    .patrocinador-img.oro-plata {
+        height: 120px; /* Ajusta la altura deseada para Oro y Plata */
+    }
+    
+    .patrocinador-img.bronce {
+        height: 100px; /* Ajusta la altura deseada para Bronce */
+        margin: 5px; /* Espacio entre imágenes */
+    }
+    
+    .recuadro-wrapper.bronce {
+        display: flex;
+        flex-direction: column; /* Alinear verticalmente */
+        justify-content: center; /* Centrar verticalmente */
+        height: 250px; /* Asegúrate de que el recuadro tenga suficiente altura */
+    }
+    
+    .image-wrapper {
+        display: flex;
+        justify-content: space-between; /* Espacio entre los logos */
+        margin-bottom: 10px; /* Espacio entre las filas */
+    }
+    .programa-item-new img {
+        cursor: pointer; /* Cambia el cursor para indicar que es clickeable */
+        transition: transform 0.3s ease; /* Transición suave */
+    }
+    
+    .programa-item-new img.enlarged {
+        transform: scale(1.5); /* Escala la imagen al 150% */
+        z-index: 10; /* Asegúrate de que esté por encima de otros elementos */
+    }
+    
+    .lightbox {
+        display: none; /* Oculto por defecto */
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(4, 3, 54, 0.8); /* Fondo oscuro */
+        justify-content: center;
+        align-items: center;
+        z-index: 1000; /* Asegúrate de que esté encima de otros elementos */
+    }
+    
+    .lightbox-img {
+        max-width: 90%;
+        max-height: 90%;
+    }
+    
+    .close {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        color: white;
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+    body {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden; /* Evita el desplazamiento horizontal */
+        }
+        .programa-container h2 {
+    margin-bottom: 40px; /* Aumenta el espacio entre el título y la descripción */
+    font-size: 2em; /* Aumenta el tamaño de la fuente del título */
+    text-align: center; /* Centra el título */
+}
+
+.description {
+    text-align: center; /* Centra el texto de la descripción */
+}
+
+.description p {
+    text-align: justify; /* Justifica el texto */
+    margin: 0 auto;
+    max-width: 800px; /* Ajusta según tus necesidades */
+    font-size: 1.2em; /* Aumenta el tamaño de la fuente de la descripción */
+}
+
+.programa-content {
+    margin-top: 20px; /* Espacio entre el texto y el cronograma */
+}
+
+.programa-item-new {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente el contenido */
+    margin-bottom: 20px; /* Espacio entre el cronograma y el video */
+}
+
+.cronograma {
+    max-width: 100px; /* Reducción del tamaño a 50% de 200px */
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin: 0 auto; /* Asegura que la imagen esté centrada */
+}
+
+.video-containerV {
+    display: flex;
+    justify-content: center; /* Centra el video */
+}
+
+.video {
+    width: 30%; /* Ajusta el tamaño del video */
+    max-width: 100px; /* Reducción del tamaño a 50% de 500px */
+    height: auto; /* Mantiene la proporción del video */
+}
+/* Estilos generales para la barra de navegación */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Estilos para el primer logo */
+.navbar-brand img {
+    max-width: 150px; /* Tamaño deseado para el primer logo */
+    height: auto;
+}
+
+/* Estilos para el segundo logo en pantallas grandes */
+.second-logo img {
+    max-width: 200px; /* Tamaño grande para el segundo logo */
+    height: auto;
+}
+
+/* Estilos para el menú */
+.navbar-nav {
+    flex-direction: row; /* Asegura que los elementos estén en fila */
+}
+
+/* Ajustes específicos para pantallas pequeñas */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: row; /* Mantiene la dirección en fila */
+        justify-content: space-between; /* Asegura que los logos y el menú se separen */
+        position: relative; /* Permite el uso de posicionamiento absoluto */
+    }
+
+    .second-logo {
+        margin: 10px; /* Espaciado alrededor del segundo logo */
+        max-width: 150px; /* Tamaño más pequeño en pantallas pequeñas */
+    }
+
+    .navbar-nav {
+        flex-direction: column; /* Coloca el menú en columna */
+        position: absolute; /* Hace que el menú sea flotante */
+        right: 0; /* Alinea el menú a la derecha */
+        top: 60px; /* Ajusta la distancia desde la parte superior */
+        background-color: rgba(0, 0, 0, 0.8); /* Fondo semi-transparente */
+        width: auto; /* Ajusta el ancho al contenido */
+        display: none; /* Esconde el menú por defecto */
+    }
+
+    .navbar-toggle {
+        display: block; /* Mostrar el botón para abrir el menú */
+        cursor: pointer; /* Cambia el cursor al pasar por encima */
+        background: none; /* Sin fondo */
+        border: none; /* Sin borde */
+        color: white; /* Color del icono */
+        font-size: 24px; /* Tamaño del icono */
+    }
+
+    .navbar-nav.show {
+        display: flex; /* Muestra el menú cuando se activa */
+    }
+
+    .nav-item {
+        width: auto; /* Ajusta el ancho de los elementos del menú */
+    }
+
+    .nav-link {
+        text-align: center; /* Alinea el texto al centro */
+        padding: 10px 15px; /* Espaciado interno para enlaces */
+        color: white; /* Color del texto */
+    }
+}
+
+/* Esconde el botón toggle en pantallas grandes */
+@media (min-width: 769px) {
+    .navbar-toggle {
+        display: none; /* Oculta el botón toggle en pantallas grandes */
+    }
+}
+
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#">
+            <img src="Logo Principal.PNG" alt="Logo">
+        </a>
+        <div class="second-logo">
+            <img src="Logo P best.png" alt="Segundo Logo"> 
+        </div>
+        <button class="navbar-toggle" onclick="toggleMenu()">☰</button>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#congreso">Congreso</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#ubicacion">Ubicación</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#patrocinadores">Patrocinadores</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#programa">Programa</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    
+
+<div class="image-container">
+    <img src="prin.png" alt="Imagen relacionada con el evento"> 
+</div>
+
+<div class="video-container">
+    <video src="ac77735b-c4aa-4bfb-aafd-b7870376ad77.MP4" controls autoplay loop muted></video>
+</div>
+
+<!-- Sección de Programa -->
+<div class="programa-container" id="programa">
+    <h2>Programa</h2>
+    <div class="description">
+        <p>El Congreso TRH 2024 es un foro de exposición, análisis y networking para la comunidad de Recursos Humanos y empresarial que desde hace 8 años reúne a ejecutivos, empresarios, líderes de RH, así como de diversas áreas con el propósito de generar propuestas y espacios para la profesionalización y la mejora de la función de RH en México. Best Summit MX, desde hace más de una década busca generar vínculos entre directivos, ejecutivos, empresarios y las empresas que representan para promover alianzas, negocios y relaciones de valor que beneficien a todas las partes.</p>
+        
+        <div class="programa-content">
+            <div class="programa-item-new">
+                <img src="Cronograma principal.JPG" alt="Imagen del programa">
+            </div>
+            <div class="video-containerV">
+                <video src="Vprin.mp4" controls autoplay loop muted></video>
+            </div></div>
+        </div>
+    </div>
+</div>
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+    <span class="close">&times;</span>
+    <img class="lightbox-img" id="lightbox-img" alt="Imagen a pantalla completa">
+</div>
+
+<!-- Sección de Congreso -->
+<div class="congreso-container" id="congreso">
+     <h2>Congreso</h2>
+     <div class="congreso-content">
+<div class="congreso-images">
+<!-- Carrusel de imágenes -->
+<div id="imageCarousel" class="carousel">
+<img src="area de talleres.JPG" alt="Imagen 1" class="carousel-image">
+<img src="Area de exposicion.JPG" alt="Imagen 2" class="carousel-image">
+<img src="Persona y seguridad.JPG" alt="Imagen 3" class="carousel-image">
+<img src="Persona y seguridad 2.JPG" alt="Imagen 4" class="carousel-image">
+<img src="area de conferencia.JPG" alt="Imagen 5" class="carousel-image">
+<img src="desarrollo de liderazgo.JPG" alt="Imagen 6" class="carousel-image">
+<img src="Principal 3.JPG" alt="Imagen 7" class="carousel-image">
+<img src="principal 4.JPG" alt="Imagen 8" class="carousel-image">
+</div>
+</div>
+<div class="subtitulo">
+Nuestros Conferencistas
+</div>
+<div class="conferencistas-container" style="display: flex; justify-content: space-between;">
+    <div id="conferencistasCarousel" class="carousel" style="flex: 1; margin-right: 20px;">
+        <img src="Octavio Aguilar.JPG" alt="Conferencista 1" class="carousel-image">
+        <img src="eduardo.jpg" alt="Conferencista 1" class="carousel-image">
+        <img src="Raciel sosa 1.JPG" alt="Conferencista 2" class="carousel-image">
+        <img src="jorge uribe.JPG" alt="Conferencista 3" class="carousel-image">
+        <img src="jessica 2.JPG" alt="Conferencista 5" class="carousel-image">
+        <img src="Raciel sosa 2.JPG" alt="Conferencista 6" class="carousel-image">
+        <img src="Octavio Aguilar 2.JPG" alt="Conferencista 7" class="carousel-image">
+        <img src="eduardo 4.jpg" alt="Conferencista 8" class="carousel-image">
+        <img src="jorge uribe 2.JPG" alt="Conferencista 9" class="carousel-image">
+        <img src="Raciel sosa 3.JPG" alt="Conferencista 10" class="carousel-image">
+        <img src="octavio aguilar 3.JPG" alt="Conferencista 11" class="carousel-image">
+        <img src="jorge uribe 3.JPG" alt="Conferencista 12" class="carousel-image">
+        <img src="Octavio aguilar 4.JPG" alt="Conferencista 13" class="carousel-image">
+    </div>
+    <div class="nuevoCarousel" style="flex: 1;">
+        <div class="nuevoCarousel-carousel">
+            <img src="jessica.JPG" alt="Conferencista 14" class="carousel-image">
+            <img src="eduardo 2.jpg" alt="Conferencista 15" class="carousel-image">
+            <img src="Raciel sosa 4.JPG" alt="Conferencista 16" class="carousel-image">
+            <img src="jorge uribe 4.JPG" alt="Conferencista 17" class="carousel-image">
+            <img src="octavio aguilar 5.JPG" alt="Conferencista 18" class="carousel-image">
+            <img src="jessica 3.JPG" alt="Conferencista 19" class="carousel-image">
+            <img src="eduardo 3.jpg" alt="Conferencista 20" class="carousel-image">
+            <img src="Raciel sosa 5.JPG" alt="Conferencista 21" class="carousel-image">
+            <img src="jorge uribe 5.JPG" alt="Conferencista 22" class="carousel-image">
+            <img src="raciel sosa 6.JPG" alt="Conferencista 23" class="carousel-image">
+            <img src="octavio aguilar 6.JPG" alt="Conferencista 24" class="carousel-image">
+            <img src="raciel sosa 7.JPG" alt="Conferencista 25" class="carousel-image">
+            <img src="octavio aguilar 7.JPG" alt="Conferencista 26" class="carousel-image">
+            <img src="jessica 4.JPG" alt="Conferencista 27" class="carousel-image">
+        </div>
+    </div>
+    
+        </div>
+    </div>
+</div>
+    </div>
+<!--imagen con enlace-->
+<div class="new-image-container">
+    <a href="https://9-congreso-tendencias-en-recursos-humanos-by-bestsummitmx.boletia.com/">
+        <img src="obten tu boleto.JPG" alt="Imagen clicable">
+    </a>
+</div>
+</div>
+</div>
+
+<!-- Sección de Registro -->
+<div class="registro-container" style="text-align: center; margin: 40px 0;">
+    <a href="#" class="neon-text" onclick="toggleRegistro()">Regístrate</a>
+    
+    <div id="registro-modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <button onclick="toggleRegistro()" class="close-button">&times;</button>
+            <h2>Registro</h2>
+            <form style="max-width: 400px; margin: 0 auto;">
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" class="form-control" id="nombre" placeholder="Introduce tu nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="apellido">Apellidos</label>
+                    <input type="text" class="form-control" id="apellido" placeholder="Introduce tu apellido" required>
+                </div>
+                <div class="form-group">
+                    <label for="correo">Correo electrónico</label>
+                    <input type="email" class="form-control" id="correo" placeholder="Introduce tu correo" required>
+                </div>
+                <div class="form-group">
+                    <label for="telefono">Teléfono</label>
+                    <input type="text" class="form-control" id="telefono" placeholder="Introduce tu número" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+                <button type="reset" class="btn btn-secondary">Borrar</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<!-- Sección de Catálogo de Imágenes -->
+<div class="catalogo-container">
+    <div id="imageCarouselCatalogo" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="row justify-content-center">
+                    <div class="col-md-4">
+                        <div class="image-wrapper">
+                            <img src="Flash dato.JPG" alt="Descripción de la imagen 1" class="img-fluid">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="image-wrapper">
+                            <img src="Flash 2.JPG" alt="Descripción de la imagen 2" class="img-fluid">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="image-wrapper">
+                            <img src="dato 1.JPG" alt="Descripción de la imagen 3" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="row justify-content-center">
+                    <div class="col-md-4">
+                        <div class="image-wrapper">
+                            <img src="dato2.JPG" alt="Descripción de la imagen 4" class="img-fluid">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="image-wrapper">
+                            <img src="flash 4.JPG" alt="Descripción de la imagen 5" class="img-fluid">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="image-wrapper">
+                            <img src="Logo 3.JPG" alt="Descripción de la imagen 6" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="row justify-content-center">
+                    <div class="col-md-4">
+                        <div class="image-wrapper">
+                            <img src="flash 5.JPG" alt="Descripción de la imagen 7" class="img-fluid">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="image-wrapper">
+                            <img src="flash 6.JPG" alt="Descripción de la imagen 8" class="img-fluid">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="image-wrapper">
+                            <img src="flash 8.JPG" alt="Descripción de la imagen 9" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="row justify-content-center">
+                    <div class="col-md-4">
+                        <div class="image-wrapper">
+                            <img src="flash 7.JPG" alt="Descripción de la imagen 10" class="img-fluid">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="image-wrapper">
+                            <img src="flash 8.JPG" alt="Descripción de la imagen 11" class="img-fluid">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="image-wrapper">
+                            <img src="flash 5.JPG" alt="Descripción de la imagen 12" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#imageCarouselCatalogo" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#imageCarouselCatalogo" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</div>
+</div>
+<!-- Fin de la sección de catálogo -->
+
+
+</div>
+<div class="ubicacion-container" id="ubicacion">
+    <h2>Ubicación</h2>
+    <div class="ubicacion">
+    <p>Av. Revolución, Tacubaya, Miguel Hidalgo, 11870 Ciudad de México, CDMX</p>
+    </div>
+    <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCfxYY9o0mKJCaw5MXGbKc1czcytIQAvXs&q=19.3965375,-99.18557949999999" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+</div>
+
+<div class="image3">
+    <img src="Principal 3.JPG" alt="Imagen relacionada con el evento">
+</div>
+<div class="image2">
+    <img src="principal 2.JPG" alt="Imagen relacionada con el evento">
+</div>
+
+<h2 class="text-center">Nuetros Patrocinadores</h2>
+
+<div class="patrocinadores-container" id="patrocinadores">
+    <div class="row justify-content-center">
+        <!-- Recuadro Diamante -->
+<div class="col-md-3">
+    <h3 class="titulo-diamante">Diamante</h3>
+    <div class="recuadro-wrapper patrocinador-recuadro diamante">
+        <div class="image-wrapper">
+            <img src="cien2.png" alt="Diamante" class="patrocinador-img diamante">
+        </div>
+    </div>
+</div>
+
+<!-- Recuadro Oro -->
+<div class="col-md-3">
+    <h3 class="titulo-oro">Oro</h3>
+    <div class="recuadro-wrapper patrocinador-recuadro oro">
+        <div class="image-wrapper">
+            <div class="logo-wrapper left">
+                <img src="ips.png" alt="Oro 1" class="patrocinador-img oro-plata">
+            </div>
+            <div class="logo-wrapper right">
+                <img src="ARIES.PNG" alt="Oro 2" class="patrocinador-img oro-plata">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Recuadro Plata -->
+<div class="col-md-3">
+    <h3 class="titulo-plata">Plata</h3>
+    <div class="recuadro-wrapper patrocinador-recuadro plata">
+        <div class="image-wrapper">
+            <div class="logo-wrapper left">
+                <img src="FaC.png" alt="Plata 1" class="patrocinador-img oro-plata">
+            </div>
+            <div class="logo-wrapper right">
+                <img src="indigo2.png" alt="Plata 2" class="patrocinador-img oro-plata">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Recuadro Bronce -->
+<div class="col-md-3">
+    <h3 class="titulo-bronce">Bronce</h3>
+    <div class="recuadro-wrapper patrocinador-recuadro bronce">
+        <div class="image-wrapper">
+            <div class="logo-wrapper">
+                <img src="GEN.PNG" alt="Bronce 1" class="patrocinador-img bronce">
+            </div>
+            <div class="logo-wrapper">
+                <img src="golf.png" alt="Bronce 2" class="patrocinador-img bronce">
+            </div>
+        </div>
+        <div class="image-wrapper">
+            <div class="logo-wrapper">
+                <img src="C. Maderas.PNG" alt="Bronce 3" class="patrocinador-img bronce">
+            </div>
+            <div class="logo-wrapper">
+                <img src="Go Kart.PNG" alt="Bronce 4" class="patrocinador-img bronce">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="aliados-container">  
+    <h2>Aliados Estratégicos</h2>
+    <div class="image-wrapper-aliados">
+        <img src="Adecco.png" alt="Aliado Estratégico" class="img-fluid">
+    </div>
+    <hr class="linea">
+    <h3 class="subtitulo-redes"></h3>
+    <div class="social-logos">
+        <a href="https://www.facebook.com/tendenciasrecursoshumanos" target="_blank" class="social-logo facebook-logo">
+            <img src="facebook.JPG"  class="img-fluid">
+        </a>
+        <a href="https://www.instagram.com/aei_iztapalapa?igsh=N210OGt6MWNuOHo=" target="_blank" class="social-logo instagram-logo">
+            <img src="instragram.WEBP"  class="img-fluid">
+        </a>
+    </div>
+</div>
+
+<footer class="footer">
+    <p>&copy; 2024 Recursos Humanos - Todos los derechos reservados</p>
+</footer>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    const imageCarousel = document.querySelectorAll('#imageCarousel .carousel-image');
+    let currentImageIndex = 0;
+    imageCarousel[currentImageIndex].style.display = 'block';
+    
+    setInterval(() => {
+    imageCarousel[currentImageIndex].style.display = 'none';
+    currentImageIndex = (currentImageIndex + 1) % imageCarousel.length;
+    imageCarousel[currentImageIndex].style.display = 'block';
+    }, 2000); // Cambia cada 3 segundos
+    
+    const conferencistasCarousel = document.querySelectorAll('#conferencistasCarousel .carousel-image');
+    let currentConferencistaIndex = 0;
+    conferencistasCarousel[currentConferencistaIndex].style.display = 'block';
+    
+    setInterval(() => {
+    conferencistasCarousel[currentConferencistaIndex].style.display = 'none';
+    currentConferencistaIndex = (currentConferencistaIndex + 1) % conferencistasCarousel.length;
+    conferencistasCarousel[currentConferencistaIndex].style.display = 'block';
+    }, 3000); // Cambia cada 5 segundos
+
+    const nuevoCarrusel = document.querySelectorAll('.nuevoCarousel-carousel .carousel-image'); // Cambié el selector aquí
+let currentNuevoIndex = 0;
+nuevoCarrusel[currentNuevoIndex].style.display = 'block';
+
+setInterval(() => {
+    nuevoCarrusel[currentNuevoIndex].style.display = 'none';
+    currentNuevoIndex = (currentNuevoIndex + 1) % nuevoCarrusel.length;
+    nuevoCarrusel[currentNuevoIndex].style.display = 'block';
+}, 3000); // Cambia cada 5 segundos
+
+function toggleRegistro() {
+    const registroModal = document.getElementById('registro-modal');
+    registroModal.style.display = registroModal.style.display === 'none' ? 'flex' : 'none';
+}
+document.addEventListener("DOMContentLoaded", function() {
+    const img = document.querySelector("#programa .programa-item-new img");
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
+    const closeBtn = document.querySelector(".close");
+
+    img.addEventListener("click", function() {
+        lightbox.style.display = "flex"; // Muestra el lightbox
+        lightboxImg.src = img.src; // Copia la fuente de la imagen
+    });
+
+    closeBtn.addEventListener("click", function() {
+        lightbox.style.display = "none"; // Oculta el lightbox
+    });
+
+    lightbox.addEventListener("click", function() {
+        lightbox.style.display = "none"; // Oculta el lightbox al hacer clic en cualquier parte
+    });
+});
+function toggleMenu() {
+    const nav = document.querySelector('.navbar-nav');
+    nav.classList.toggle('show');
+}
+    </script>
+</body>
+</html>
