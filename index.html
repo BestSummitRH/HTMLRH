@@ -684,6 +684,7 @@
 
 .programa-content {
     margin-top: 20px; /* Espacio entre el texto y el cronograma */
+    text-align: center; /* Centra el contenido dentro de programa-content */
 }
 
 .programa-item-new {
@@ -693,21 +694,34 @@
 }
 
 .cronograma {
-    max-width: 100px; /* Reducción del tamaño a 50% de 200px */
+    max-width: 500px; /* Aumenta el ancho máximo de la imagen */
     height: auto; /* Mantiene la proporción de la imagen */
-    margin: 0 auto; /* Asegura que la imagen esté centrada */
-}
+        margin: 0 auto; /* Centra la imagen */
+    }
 
+/* Estilo del contenedor del video */
 .video-containerV {
     display: flex;
     justify-content: center; /* Centra el video */
+    margin-top: 10px; /* Espacio entre el texto y el video */
 }
 
+/* Estilo del video */
 .video {
-    width: 30%; /* Ajusta el tamaño del video */
-    max-width: 100px; /* Reducción del tamaño a 50% de 500px */
-    height: auto; /* Mantiene la proporción del video */
+    max-width: 200px; /* Ajusta el tamaño al del cronograma */
+    width: 100%; /* Mantiene la proporción de tamaño */
+    height: auto; /* Ajusta la altura para mantener la proporción */
 }
+
+
+.subtitulo {
+    color: #00FFFF; /* Color azul neón */
+    font-size: 1.5em; /* Tamaño del subtítulo */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el texto */
+    text-align: center; /* Centra el subtítulo */
+    margin-top: 20px; /* Espacio entre el cronograma y el subtítulo */
+}
+
 /* Estilos generales para la barra de navegación */
 .navbar {
     display: flex;
@@ -831,17 +845,19 @@
     <h2>Programa</h2>
     <div class="description">
         <p>El Congreso TRH 2024 es un foro de exposición, análisis y networking para la comunidad de Recursos Humanos y empresarial que desde hace 8 años reúne a ejecutivos, empresarios, líderes de RH, así como de diversas áreas con el propósito de generar propuestas y espacios para la profesionalización y la mejora de la función de RH en México. Best Summit MX, desde hace más de una década busca generar vínculos entre directivos, ejecutivos, empresarios y las empresas que representan para promover alianzas, negocios y relaciones de valor que beneficien a todas las partes.</p>
-        
-        <div class="programa-content">
-            <div class="programa-item-new">
-                <img src="Cronograma principal.JPG" alt="Imagen del programa">
-            </div>
-            <div class="video-containerV">
-                <video src="Vprin.mp4" controls autoplay loop muted></video>
-            </div></div>
+    </div>
+
+    <div class="programa-content">
+        <div class="programa-item-new">
+            <img class="cronograma" src="Cronograma principal.JPG" alt="Imagen del programa">
         </div>
+        <h3 class="subtitulo">¿Ya tienes tu boleto?</h3>
+        <div class="video-containerV">
+            <video class="video" src="Vprin.mp4" controls autoplay loop muted></video>       
     </div>
 </div>
+</div>
+
 <!-- Lightbox -->
 <div class="lightbox" id="lightbox">
     <span class="close">&times;</span>
@@ -1131,26 +1147,25 @@ Nuestros Conferencistas
 
 
 
-<div class="aliados-container">  
+<div class="aliados-container" style="text-align: center;">
     <h2>Aliados Estratégicos</h2>
-    <div class="image-wrapper-aliados">
+    <div class="image-wrapper-aliados" style="margin: auto;">
         <img src="Adecco.png" alt="Aliado Estratégico" class="img-fluid">
     </div>
-    <hr class="linea">
-    <h3 class="subtitulo-redes"></h3>
-    <div class="social-logos">
+    <hr class="linea" style="margin: 20px auto; width: 50%;">
+    <div class="social-logos" style="margin-bottom: 20px;">
         <a href="https://www.facebook.com/tendenciasrecursoshumanos" target="_blank" class="social-logo facebook-logo">
-            <img src="facebook.JPG"  class="img-fluid">
+            <img src="facebook.JPG" class="img-fluid">
         </a>
         <a href="https://www.instagram.com/aei_iztapalapa?igsh=N210OGt6MWNuOHo=" target="_blank" class="social-logo instagram-logo">
-            <img src="instragram.WEBP"  class="img-fluid">
+            <img src="instragram.WEBP" class="img-fluid">
         </a>
     </div>
+    <footer class="footer">
+        <p>&copy; 2024 Recursos Humanos - Todos los derechos reservados</p>
+    </footer>
 </div>
 
-<footer class="footer">
-    <p>&copy; 2024 Recursos Humanos - Todos los derechos reservados</p>
-</footer>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
